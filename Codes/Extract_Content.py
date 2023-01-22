@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = "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"
+openai.api_key = "API Key"
 
 model_engine = "text-davinci-003"
 prompt = "tell me 100 gk questions"
