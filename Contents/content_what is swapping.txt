@@ -1,0 +1,3 @@
+
+
+Swapping is the process of exchanging the contents of two memory locations. In computer programming, swapping is done to change the values stored in two variables. It is a common technique used in sorting algorithms. For example, if two numbers need to be sorted in ascending order, they can be swapped if the first number is larger than the second.

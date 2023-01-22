@@ -1,0 +1,14 @@
+
+
+1. Linear Regression
+2. Logistic Regression
+3. Decision Trees
+4. Random Forests
+5. Naive Bayes
+6. K-Nearest Neighbors (KNN)
+7. Support Vector Machines (SVM)
+8. K-Means Clustering
+9. Dimensionality Reduction Algorithms (PCA, ICA, LDA, t-SNE)
+10. Gradient Boosting & Adaboost
+11. Neural Networks & Deep Learning
+12. Reinforcement Learning

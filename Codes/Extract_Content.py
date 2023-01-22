@@ -1,10 +1,9 @@
 import openai
-import os
 
-openai.api_key = "API Key"
+openai.api_key = "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"
 
 model_engine = "text-davinci-003"
-prompt = "give me 99 different relationship quotes"
+prompt = "tell me 100 gk questions"
 
 class process:
     def extract_content():
@@ -22,9 +21,7 @@ class process:
 
         text_file = open(f"../Contents/content_{prompt}.txt", "w")
         n = text_file.write(response)
+        #print(str(n))
         text_file.close()
 
 content = process.extract_content()
-
-
-print(os.getcwd())
