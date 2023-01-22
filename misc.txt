@@ -1,0 +1,76 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                        Explortion
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+murf.ai - natural voice maker.. text to audio
+
+app.pictory.ai - text to video
+
+veed.io - text to speech
+
+DALL-E - text to image generator (GOOGLE)
+
+Stable Diffusion - text to image (Open Source)
+
+Deep mind (Transframer) - images to video (state of art.. ca produce 30 sec video with single image)
+
+Microsoft nuwa infinity - img, video, text to video (unavailable to public)
+
+CogVideo - text to  video (state of art and opensource)
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                        Development
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Step 1 --- > create emails automatically
+
+Step 2 --- > create youtube channels
+
+Step 3 --- > use ChatGPT to get contents
+           |--------- if content already available as (video) -------- >>> Step 1 --- > Extract audio
+                                   |---------------------------------- >>> Step 2 --- > Generate text
+                                   |---------------------------------- >>> Step 3 --- > Translate
+                                   |---------------------------------- >>> Step 4 --- > Generate audio
+
+
+           |--------- if content already available as (audio) -------- >>> Step 1 --- > Generate text
+                                   |---------------------------------- >>> Step 2 --- > Translate
+                                   |---------------------------------- >>> Step 3 --- > Generate audio
+
+
+           |--------- if content already available as (text) --------- >>> Step 1 --- > Convert to word format
+                                   |---------------------------------- >>> Step 2 --- > Compress / Split to {word count}
+                                   |---------------------------------- >>> Step 3 --- > Translate
+                                   |---------------------------------- >>> Step 4 --- > Generate audio
+
+Step 4 --- > Extract audio of the contents
+
+Step 5 --- > use pixxels to generate video 
+           |--------- if content already available as (video) -------- >>> Step 1 --- > Use same video {request for video to be stored in the local dir} -- {same video - diff langg}
+        
+           |--------------------------- else ------------------------- >>> Step 1 --- > Extract keywords (only from english translated file)
+                                   |---------------------------------- >>> Step 2 --- > Pick videos in pixxels
+                                   |---------------------------------- >>> Step 3 --- > Save to local dir
+
+Step 6 --- > merge audio + video
+
+Step 7 --- > use Dall-e to create thumbnail
+           |--------- if content already available as (video) -------- >>> Step 1 --- > Use same thumbnail {request for thumbnail to be stored in the local dir}
+        
+           |--------------------------- else ------------------------- >>> Step 1 --- > load OpenAI Dall-e
+                                   |---------------------------------- >>> Step 2 --- > use same keyword here
+                                   |---------------------------------- >>> Step 3 --- > Save the generated pic to the local dir
+
+Step 8 --- > Upload the video in YouTube channel
+
+Step 9 --- > use ChatGPT to fetch description and all such things
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
