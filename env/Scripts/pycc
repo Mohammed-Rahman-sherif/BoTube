@@ -1,0 +1,3 @@
+#!c:\users\smart\documents\youtube automator\env\scripts\python.exe
+from numba.pycc import main
+main()

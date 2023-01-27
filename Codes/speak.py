@@ -1,21 +1,15 @@
-import pyttsx3
+import os
+from gtts import gTTS
 
-engine = pyttsx3.init()
+text = "வணக்கம், உங்கள் தமிழ் பாட்டுக்கு அனுப்பப்பட்டுள்ளது."
 
-voices = engine.getProperty('voices')
-print(len(voices))
-for voice in voices:
-    print("Voice:")
-    print(" - ID: %s" % voice.id)
-    print(" - Name: %s" % voice.name)
-    print(" - Languages: %s" % voice.languages)
-    print(" - Gender: %s" % voice.gender)
-    print(" - Age: %s" % voice.age)
-    
-engine.setProperty('voice', voices[2].id)
+tts = gTTS(text, lang='ta')
+tts.save("hello.mp3")
 
-#engine.setProperty('voice', 'com.apple.speech.synthesis.voice.daniel')
+from playsound import playsound
+#playsound("hello.mp3")
 
-engine.say("Hello, how are you today?")
-
-engine.runAndWait()
+audio_path = '../Audio/Translated'
+name = 'xhsbs'
+des = 'ta'
+print(os.path.join(audio_path, des, name + '.mp3'))
