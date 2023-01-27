@@ -9,7 +9,7 @@ from googletrans import Translator
 from moviepy.video.io.VideoFileClip import VideoFileClip
 
 class YouTubeTranscribe:
-    def __init__(self, link: str, path: str = "../Media", audio_path: str = "../Audio"):
+    def __init__(self, link: str, path: str = "../Media", audio_path: str = "../Audio/Original"):
         self.youtube = YouTube(link)
         self.video_stream = self.youtube.streams.get_highest_resolution()
 
