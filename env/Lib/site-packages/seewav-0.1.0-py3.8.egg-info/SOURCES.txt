@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+seewav.py
+setup.cfg
+setup.py
+seewav.egg-info/PKG-INFO
+seewav.egg-info/SOURCES.txt
+seewav.egg-info/dependency_links.txt
+seewav.egg-info/entry_points.txt
+seewav.egg-info/requires.txt
+seewav.egg-info/top_level.txt
