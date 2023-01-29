@@ -10,14 +10,14 @@ driver.get("https://accounts.google.com/signin/v2/identifier?service=youtube&uil
 
 email_field = driver.find_element(By.ID, "identifierId")
 email_field.send_keys("balasubramanianathi@gmail.com")
-email_field.send_keys(Keys.RETURN)
+#email_field.send_keys(Keys.RETURN)
 email_field.send_keys(Keys.RETURN)
 
-'''
+
 password_field = driver.find_element(By.CLASS_NAME, "whsOnd zHQkBf")
 password_field.send_keys("balasubramanianathi")
 password_field.send_keys(Keys.RETURN)
-
+'''
 profile_selection = driver.find_element(By.ID, "img")
 profile_selection.click()
 
