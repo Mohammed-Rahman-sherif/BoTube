@@ -1,0 +1,31 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: var(--light-color);
+  border-radius: 100px;
+}
+ 
+/* body::-webkit-scrollbar-track {
+} */
+ 
+body::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: var(--dark-color);
+}
+
+:root {
+  /*colors*/
+
+  --primary-color:#ff0000;
+  --light-color:#E5E5E5;
+  --dark-color:#030303;
+
+}
