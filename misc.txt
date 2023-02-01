@@ -20,6 +20,7 @@ Microsoft nuwa infinity - img, video, text to video (unavailable to public)
 
 CogVideo - text to  video (state of art and opensource)
 
+beta.elevenlabs.io - Amarican voice tones but generates our own voice. $22 / month.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -77,3 +78,11 @@ Step 9 --- > use ChatGPT to fetch description and all such things
 
 sign up operation
 login operation
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Ashwin - frondend (backend), db, user auth --> GO lang
+
+Santhosh - frontend 
+
