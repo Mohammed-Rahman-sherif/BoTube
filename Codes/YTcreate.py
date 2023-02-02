@@ -12,6 +12,7 @@ driver.get("https://accounts.google.com/v3/signin/identifier?dsh=S-922693519%3A1
 
 email_field = driver.find_element(By.ID, "identifierId")
 email_field.send_keys("balasubramanianathi@gmail.com")
+<<<<<<< HEAD
 email_field.send_keys(Keys.RETURN)
 
 try:
@@ -27,6 +28,15 @@ finally:
 password_field = driver.find_element(By.NAME, "Passwd")
 password_field.send_keys("balasubramanianathi")
 password_field.send_keys(Keys.RETURN)'''
+=======
+#email_field.send_keys(Keys.RETURN)
+email_field.send_keys(Keys.RETURN)
+
+
+password_field = driver.find_element(By.CLASS_NAME, "whsOnd zHQkBf")
+password_field.send_keys("balasubramanianathi")
+password_field.send_keys(Keys.RETURN)
+>>>>>>> 1085b4d453bdba920d8cb7d3600ebbccb1202d05
 '''
 profile_selection = driver.find_element(By.ID, "img")
 profile_selection.click()

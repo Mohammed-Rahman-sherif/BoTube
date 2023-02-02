@@ -1,6 +1,7 @@
 import os
 import random
 import string
+import threading
 from gtts import gTTS
 from pytube import YouTube
 import speech_recognition as sr
@@ -18,6 +19,7 @@ class YouTubeTranscribe:
         self.audio_file = f"{self.name}.wav"
         self.path = path
         self.audio_path = audio_path
+        self.transcribed_text = ""
         self.download_video()
         self.extract_audio()
         self.transcribe_audio()
@@ -25,6 +27,7 @@ class YouTubeTranscribe:
         self.option = input("Enter 'ta' for Tamil, 'te' for Telugu, 'zh-cn' for Chinese: ")
         self.translate_file(f'../Contents/{self.name}.txt', self.option)
         self.speak_text(self.translation.text)
+        self.allign()
 
     def download_video(self):
         try:
@@ -53,24 +56,23 @@ class YouTubeTranscribe:
                 duration = len(audio.get_wav_data()) / audio.sample_rate / audio.sample_width
                 chunk_duration = 60  # duration of each chunk in seconds
                 offset = 0  # starting point of the first chunk
-                transcribed_text = ""
+                self.transcribed_text = ""
+                threads = []
                 while offset < duration:
                     with sr.AudioFile(os.path.join(self.audio_path, self.audio_file)) as source:
                         audio_chunk = r.record(source, offset=offset, duration=chunk_duration)
                         if offset < duration:
-                            try:
-                                text = r.recognize_google(audio_chunk)
-                                transcribed_text += text + "\n"
-                                counter += 1
-                            except sr.UnknownValueError:
-                                print("Could not understand audio, skipping chunk...")
-                                failed_counter += 1
+                            t = threading.Thread(target=self.process_chunk, args=(r, audio_chunk, counter, failed_counter))
+                            t.start()
+                            threads.append(t)
                         else:
                             pass
                         offset += chunk_duration
+                for t in threads:
+                    t.join()
                 with open(os.path.join("../Contents", f"{self.name}.txt"), "w") as file:
-                    file.write(transcribed_text)
-                print(transcribed_text)
+                    file.write(self.transcribed_text)
+                print(self.transcribed_text)
                 print("Total chunks processed:", counter)
                 print("Total chunks failed:", failed_counter)
 
@@ -80,6 +82,16 @@ class YouTubeTranscribe:
             print(f"Unexpected error: {e}")
 
         return ""
+
+    def process_chunk(self, recognizer, audio_chunk, counter, failed_counter):
+        try:
+            text = recognizer.recognize_google(audio_chunk)
+            self.transcribed_text += text + "\n"
+            counter += 1
+        except sr.UnknownValueError:
+            print("Could not understand audio, skipping chunk...")
+            failed_counter += 1
+
 
     def translate_file(self, file_path, dest_language):
         # Initialize the translator
@@ -110,5 +122,8 @@ class YouTubeTranscribe:
         
         except Exception as e:
             print(f'An error occured while generating translated audio: {e}')
+    def allign(self):
+        import words7inaline as w
+        w.format_text(f'../Contents/{self.name}.txt')
 
-youtube_transcribe = YouTubeTranscribe("https://youtu.be/7COmHMJztgI")
+youtube_transcribe = YouTubeTranscribe("https://youtu.be/mZ4Mt7VzELA")
