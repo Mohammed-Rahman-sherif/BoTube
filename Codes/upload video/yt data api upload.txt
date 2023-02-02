@@ -1,0 +1,56 @@
+pip install --upgrade google-api-python-client
+
+pip install --upgrade google-auth-oauthlib google-auth-httplib2
+
+open google cloud
+
+create account or signin
+
+click console
+
+create new project, avoid if you already have a created project
+
+select api and services in menu
+
+select library and type and select youtube data api v3 and enable it
+
+click manage and select credentials
+
+click create credentials
+
+select create oauth id
+
+click external
+
+type app name, your mail id and click save and continue
+
+select add scope type and and select upload and click update
+
+click add user enter your mailid
+
+select save and continue
+
+select back to dashboard
+
+click credentials and again click create credentials and select create oauth id and it gets created
+
+you can get client id and client secret
+
+create create_credentials.json file and copy the code in the youtube data api documentation in the upload a video section
+
+type your client id and secret in that json file
+
+create upload_video.py file and copy the sample code in that documentation
+
+add some changes in that code because the code cannot support for the python 3 version
+
+some changes are
+1.add brackets in print function
+2.remove , and add as in exception line
+3.remove all httplib module contents
+save the file
+
+pip install oauth2client
+
+
+  

@@ -1,0 +1,3 @@
+youtube api : AIzaSyCkL2of5TogN6yZgIwFyshRC7T38I9VkAU
+client id : 388883833433-a64btd923r8csrvbiq9bi0l4m243kssr.apps.googleusercontent.com
+client secret : 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
