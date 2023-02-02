@@ -47,7 +47,7 @@ def add_text(img, text, pos):
 # Define video frame size and create video writer
 frame_size = (1000, 500)
 fourcc = cv2.VideoWriter_fourcc(*"XVID")
-video_writer = cv2.VideoWriter("star_wars_opening.avi", fourcc, 50, frame_size)
+video_writer = cv2.VideoWriter("star_wars_opening.mp4", fourcc, 50, frame_size)
 
 # Generate video frames
 for i in range(total_frames):

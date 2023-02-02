@@ -31,4 +31,4 @@ def format_text(filename):
         file.write('\n'.join(new_lines))
 
 
-format_text('../Contents/wKXfq.txt')
+#format_text('../Contents/wKXfq.txt')

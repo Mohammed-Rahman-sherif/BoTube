@@ -27,6 +27,7 @@ class YouTubeTranscribe:
         self.option = input("Enter 'ta' for Tamil, 'te' for Telugu, 'zh-cn' for Chinese: ")
         self.translate_file(f'../Contents/{self.name}.txt', self.option)
         self.speak_text(self.translation.text)
+        self.allign()
 
     def download_video(self):
         try:
@@ -121,5 +122,8 @@ class YouTubeTranscribe:
         
         except Exception as e:
             print(f'An error occured while generating translated audio: {e}')
+    def allign(self):
+        import words7inaline as w
+        w.format_text(f'../Contents/{self.name}.txt')
 
-youtube_transcribe = YouTubeTranscribe("https://youtu.be/7COmHMJztgI")
+youtube_transcribe = YouTubeTranscribe("https://youtu.be/mZ4Mt7VzELA")
