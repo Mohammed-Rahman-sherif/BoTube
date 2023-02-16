@@ -1,6 +1,1 @@
-python upload_video.py --file="C:/Users/User/Desktop/sample.mp4"
-                       --title="A Beautiful Cat"
-                       --description="Had fun surfing with cat"
-                       --keywords="cat surf"
-                       --category="22"
-                       --privacyStatus="private"
+python upload_video.py --file="C:/Users/User/Desktop/sample.mp4" --title="A Beautiful Cat" --description="Had fun surfing with cat" --keywords="cat surf" --category="22" --privacyStatus="private"
